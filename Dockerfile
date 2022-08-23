@@ -2,7 +2,7 @@
 FROM biansepang/weebproject:buster
 
 # Clone repo and prepare working directory
-RUN git clone -b master https://github.com/Ajibcdefgh/WeebProject /home/weebproject/ \
+RUN git clone -b master https://github.com/Ajibcdefgh/DarkProject /home/weebproject/ \
     && chmod 777 /home/weebproject \
     && mkdir /home/weebproject/bin/
 
