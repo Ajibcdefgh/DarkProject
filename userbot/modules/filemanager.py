@@ -99,9 +99,9 @@ async def lst(event):
         return
     if isdir(path):
         if cat:
-            msg = f"**Folders and Files in `{path}`** :\n\n"
+            msg = f"**Folder dan File di `{path}`** :\n\n"
         else:
-            msg = "**Folders and Files in Current Directory** :\n\n"
+            msg = "**Folder dan File di Direktori Saat Ini** :\n\n"
         lists = listdir(path)
         files = ""
         folders = ""
