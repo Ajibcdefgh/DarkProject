@@ -383,7 +383,7 @@ async def sticker_to_png(sticker):
         image.name = "sticker.png"
         image.seek(0)
         try:
-            await img.reply(file=image, force_document=True)
+            await img.reply(file=image, force_document=False)
         except Exception:
             await sticker.edit("`Err, can't send file...`")
         else:
