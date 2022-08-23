@@ -1,4 +1,4 @@
-<h1 align="center">WeebProject Userbot</h1>
+<h1 align="center">DarkProject Userbot</h1>
 
 <p align="center">
     <a href="https://app.codacy.com/gh/BianSepang/WeebProject/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy&style=flat-square" alt="Codacy" /></a><br>
