@@ -146,7 +146,7 @@ async def fetch_info(replied_user, event):
     caption += f"Nama Depan: {first_name}\n"
     caption += f"Nama Belakang: {last_name}\n"
     caption += f"Username: {username}\n"
-    caption += f"DC ID: {dc_id}\n"
+    caption += f"Data Center ID: {dc_id}\n"
     caption += f"Jumlah Foto Profil: {replied_user_profile_photos_count}\n"
     caption += f"Apakah Bot: {is_bot}\n"
     caption += f"Apakah Dibatasi: {restricted}\n"
