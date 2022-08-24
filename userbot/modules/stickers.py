@@ -43,7 +43,7 @@ KANGING_STR = [
 ]
 
 
-@register(outgoing=True, pattern=r"^\.curry")
+@register(outgoing=True, pattern=r"^\.kang")
 async def kang(args):
     """For .kang command, kangs stickers or creates new ones."""
     user = await bot.get_me()
@@ -287,7 +287,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            "Curry Success!" f"\n[Klik Disini](t.me/addstickers/{packname})",
+            "Kang Success!" f"\n[Klik Disini](t.me/addstickers/{packname})",
             parse_mode="md",
         )
 
@@ -449,9 +449,9 @@ async def convert_webm(message, output="sticker.webm"):
 
 CMD_HELP.update(
     {
-        "stickers": ">`.curry`"
-        "\nUsage: Reply .curry to a sticker or an image to put it to your sticker pack."
-        "\n\n>`.curry (emoji['s]]?` [number]?"
+        "stickers": ">`.kang`"
+        "\nUsage: Reply .kang to a sticker or an image to put it to your sticker pack."
+        "\n\n>`.kang (emoji['s]]?` [number]?"
         "\nUsage: Curry the sticker/image to the specified pack. You can specify the emoji too. "
         "(Default: 🤔)"
         "\n\n>`.stkrinfo`"
