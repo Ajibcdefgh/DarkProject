@@ -2979,7 +2979,7 @@ async def _(event):
 
 
 CMD_HELP.update({
-    "remixmemes":
+    "morememes":
     "`.eye`\
 \nUsage: see it yourself.\
 \n\n`.earth`\
