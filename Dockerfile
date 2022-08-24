@@ -3,7 +3,7 @@ FROM biansepang/weebproject:buster
 
 # Clone repo and prepare working directory
 RUN git clone -b master https://github.com/Ajibcdefgh/DarkProject /home/weebproject/ \
-    && chmod 777 /home/weebproject \
+    && chmod 777 /home/darkproject \
     && mkdir /home/darkproject/bin/
 
 # Copies config.env (if exists)
