@@ -16,7 +16,7 @@ elif [ ${1} == "-d" ] || [ ${1} == "--daemonize" ] ; then
 	echo -e "I: Running silently in the background like a ninja..."
 	cd ${BOTDIR}
 	. venv/bin/activate
-	nohup python3 -m userbot >>${UNIXTIME}-weebproject.log 2>&1 & echo "I: Userbot PID is ${!}"
+	nohup python3 -m userbot >>${UNIXTIME}-darkproject.log 2>&1 & echo "I: Userbot PID is ${!}"
 	deactivate
 	cd ${RUNDIR}
 	exit 0
