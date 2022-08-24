@@ -21,17 +21,17 @@ elif [ ${1} == "-d" ] || [ ${1} == "--daemonize" ] ; then
 	cd ${RUNDIR}
 	exit 0
 elif [ ${1} == "-h" ] || [ ${1} == "--help" ] ; then
-	echo -e "WeebProject"
+	echo -e "DarkProject"
 	echo -e  "Licensed under Raphielscape Public License"
 	echo -e "\nUsage:"
 	echo -e "[no arguments] || -x -- Run in the foreground, stdout is the logcat"
-	echo -e "--daemonize    || -d -- Run in the background, logs will be saved in *-weebproject.log"
+	echo -e "--daemonize    || -d -- Run in the background, logs will be saved in *-darkproject.log"
 	exit 0
 else
-	echo -e  "WeebProject"
+	echo -e  "DarkProject"
         echo -e  "Licensed under Raphielscape Public License"
         echo -e  "\nUsage:"
         echo -e  "[no arguments] || -x -- Run in the foreground, stdout is the logcat"
-        echo -e  "--daemonize    || -d -- Run in the background, logs will be saved in *-weebproject.log"
+        echo -e  "--daemonize    || -d -- Run in the background, logs will be saved in *-darkproject.log"
 	exit 127
 fi
