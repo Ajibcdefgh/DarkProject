@@ -21,6 +21,10 @@ from telethon import TelegramClient, version
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
+from .storage import Storage
+
+STORAGE = lambda n: Storage(Path("data") / n)
+
 load_dotenv("config.env")
 
 # Bot Logs setup:
