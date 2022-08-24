@@ -112,12 +112,16 @@ async def set_var(var):
 """
 
 
-@register(outgoing=True, pattern=r"^\.usage(?: |$)")
+@register(outgoing=True, pattern=r"^\.usage$")
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
     """
-    await dyno.edit("`Mendapatkan informasi...`")
+    if app is None:
+        return await dyno.edit(
+            "**Please setup your** `HEROKU_APP_NAME` **and** `HEROKU_API_KEY`**.**"
+        )
+    await dyno.edit("**Mengecek dyno...**")
     user_id = Heroku.account().id
     path = "/accounts/" + user_id + "/actions/get-quota"
     async with aiohttp.ClientSession() as session:
@@ -136,18 +140,18 @@ async def dyno_usage(dyno):
                 await dyno.client.send_message(
                     dyno.chat_id, f"`{r.reason}`", reply_to=dyno.id
                 )
-                await dyno.edit("`Tidak bisa mendapatkan informasi...`")
+                await dyno.edit("**Error: Heroku is being Heroku.**")
                 return False
             result = await r.json()
             quota = result["account_quota"]
             quota_used = result["quota_used"]
-
+            """ - User Quota Limit and Used - """
             remaining_quota = quota - quota_used
             percentage = math.floor(remaining_quota / quota * 100)
             minutes_remaining = remaining_quota / 60
             hours = math.floor(minutes_remaining / 60)
             minutes = math.floor(minutes_remaining % 60)
-
+            """ - User App Used Quota - """
             Apps = result["apps"]
             for apps in Apps:
                 if apps.get("app_uuid") == app.id:
@@ -162,14 +166,9 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**Penggunaan Dyno**:\n\n"
-                f"-> `Penggunaan Dyno untuk`  **{app.name}**:\n"
-                f"     •  **{AppHours} jam, "
-                f"{AppMinutes} menit  -  {AppPercentage}%**"
-                "\n\n"
-                "-> `Sisa Dyno di bulan ini`:\n"
-                f"     •  **{hours} jam, {minutes} menit  "
-                f"-  {percentage}%**"
+                "**Statistik Dyno Heroku untuk bulan ini**\n\n"
+                f"**Penggunaan ({app.name}):** {AppHours} jam, {AppMinutes} menit - {AppPercentage}%\n"
+                f"**Tersisa (total):** {hours} jam, {minutes} menit - {percentage}%"
             )
             return True
 
@@ -180,7 +179,7 @@ async def _(dyno):
         return await dyno.edit(
             "**Please setup your** `HEROKU_APP_NAME` **and** `HEROKU_API_KEY`**.**"
         )
-    await dyno.edit("**Processing...**")
+    await dyno.edit("**Mengambil logs...**")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     await dyno.client.send_file(
