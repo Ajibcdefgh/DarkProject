@@ -1,5 +1,7 @@
 <h1 align="center">DarkProject Userbot</h1>
 
+![logo](https://telegra.ph/file/ae6bb0a12ff19f9ab01cc.jpg)
+
 <p align="center">
     <a href="https://app.codacy.com/gh/Ajibcdefgh/DarkProject/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy&style=flat-square" alt="Codacy" /></a><br>
     <a href="https://github.com/Ajibcdefgh/DarkProject/stargazers"> <img src="https://img.shields.io/github/stars/Ajibcdefgh/DarkProject?logo=github&style=flat-square" alt="Stars" /></a>
