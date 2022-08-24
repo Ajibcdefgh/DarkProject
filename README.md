@@ -1,10 +1,10 @@
 <h1 align="center">DarkProject Userbot</h1>
 
 <p align="center">
-    <a href="https://app.codacy.com/gh/BianSepang/WeebProject/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy&style=flat-square" alt="Codacy" /></a><br>
-    <a href="https://github.com/BianSepang/WeebProject/stargazers"> <img src="https://img.shields.io/github/stars/BianSepang/WeebProject?logo=github&style=flat-square" alt="Stars" /></a>
-    <a href="https://github.com/BianSepang/WeebProject/network/members"> <img src="https://img.shields.io/github/forks/BianSepang/WeebProject?logo=github&style=flat-square" alt="Forks" /></a>
-    <a href="https://github.com/BianSepang/WeebProject/graphs/contributors"> <img src="https://img.shields.io/github/contributors/BianSepang/WeebProject?logo=github&color=blue&style=flat-square" alt="Contributors" /></a><br>
+    <a href="https://app.codacy.com/gh/Ajibcdefgh/DarkProject/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy&style=flat-square" alt="Codacy" /></a><br>
+    <a href="https://github.com/Ajibcdefgh/DarkProject/stargazers"> <img src="https://img.shields.io/github/stars/Ajibcdefgh/DarkProject?logo=github&style=flat-square" alt="Stars" /></a>
+    <a href="https://github.com/Ajibcdefgh/DarkProject/network/members"> <img src="https://img.shields.io/github/forks/Ajibcdefgh/DarkProject?logo=github&style=flat-square" alt="Forks" /></a>
+    <a href="https://github.com/Ajibcdefgh/DarkProject/graphs/contributors"> <img src="https://img.shields.io/github/contributors/Ajibcdefgh/DarkProject?logo=github&color=blue&style=flat-square" alt="Contributors" /></a><br>
     <a href="https://python.org/downloads"> <img src="https://img.shields.io/static/v1?label=python&message=3.9&style=flat-square&color=blue&logo=python" /></a>
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?label=telethon&logo=pypi&logoColor=white&style=flat-square" /></a>
 </p>
@@ -27,7 +27,7 @@
 
 A modular Telegram Userbot running on Python3 with sqlalchemy database.
 
-based on [ProjectBish](https://github.com/adekmaulana/ProjectBish) Userbot
+based on [ProjectBish](https://github.com/adekmaulana/ProjectBish) and [WeebProject](https://github.com/BianSepang/WeebProject) Userbot
 ## Variable For Heroku Vars Settings
 <details>
    <summary>Click for more details</summary>
@@ -121,7 +121,7 @@ based on [ProjectBish](https://github.com/adekmaulana/ProjectBish) Userbot
 * [Aidil Aryanto](https://github.com/aidilaryanto) - ProjectDils
 * [Alfianandaa](https://github.com/alfianandaa) - ProjectAlf
 * [GengKapak](https://github.com/GengKapak) - DCLXVI
-
+* [BianSepang](https://github.com/BianSepang) - WeebProject
 and [everyone](https://github.com/BianSepang/WeebProject/graphs/contributors) that makes this userbot awesome :D
 
 ## License
