@@ -19,16 +19,16 @@ async def help_handler(event):
         else:
             await event.edit(f"`{args}` is not a valid module name.")
     else:
-        head = "Please specify which module do you want help for !!"
-        head2 = f"Loaded Modules : {len(CMD_HELP)}"
-        head3 = "Usage: `.help` `<module name>`"
-        head4 = "List for all available command below: "
+        head = "Silakan tentukan modul mana yang Anda inginkan bantuannya !!"
+        head2 = f"Modul yang dimuat : {len(CMD_HELP)}"
+        head3 = "Usage: `.help` `<nama modul>`"
+        head4 = "Daftar untuk semua perintah yang tersedia di bawah ini: "
         string = ""
-        sep1 = "`••••••••••••••••••••••••••••••••••••••••••••••`"
+        sep1 = "`▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱`"
         sep2 = "`=========================================`"
         for i in sorted(CMD_HELP):
             string += "`" + str(i)
-            string += "`  |  "
+            string += "`  •  "
         await event.edit(
             f"{head}\
               \n{head2}\
