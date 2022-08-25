@@ -49,7 +49,7 @@ async def _(event):
     if not reply_message.media:
         await event.edit("Balas di Sticker Tolol!!")
         return
-    chat = "@@Sticker2GIFBot"
+    chat = "@Sticker2GIFBot"
     await event.edit("Convert to gif..")
     async with event.client.conversation(chat) as conv:
         try:
@@ -60,7 +60,7 @@ async def _(event):
             msg = await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("unblock me @@Sticker2GIFBot to work")
+            await event.reply("unblock me @Sticker2GIFBot to work")
             return
         if response.text.startswith("I understand only stickers"):
             await event.edit("Sorry i cant't convert it check wheter is non animated sticker or not")
