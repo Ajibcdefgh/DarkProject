@@ -27,9 +27,9 @@ from userbot.events import register
 from userbot.modules.admin import get_user_from_event
 
 
-@register(outgoing=True, pattern=r"^\.userid$")
+@register(outgoing=True, pattern=r"^\.uid$")
 async def useridgetter(target):
-    """For .userid command, returns the ID of the target user."""
+    """For .uid command, returns the ID of the target user."""
     message = await target.get_reply_message()
     if message:
         if not message.forward:
@@ -62,9 +62,9 @@ async def permalink(mention):
         await mention.edit(f"[{tag}](tg://user?id={user.id})")
 
 
-@register(outgoing=True, pattern=r"^\.chatid$")
+@register(outgoing=True, pattern=r"^\.cid$")
 async def chatidgetter(chat):
-    """For .chatid, returns the ID of the chat you are in at that moment."""
+    """For .cid, returns the ID of the chat you are in at that moment."""
     await chat.edit("Chat ID: `" + str(chat.chat_id) + "`")
 
 
