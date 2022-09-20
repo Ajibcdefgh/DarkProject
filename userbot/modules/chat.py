@@ -550,9 +550,9 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "chat": ">`.chatid`"
+        "chat": ">`.cid`"
         "\nUsage: Fetches the current chat's ID"
-        "\n\n>`.userid`"
+        "\n\n>`.uid`"
         "\nUsage: Fetches the ID of the user in reply, if its a forwarded message, finds the ID for the source."
         "\n\n>`.chatinfo` [optional: <reply/tag/chat id/invite link>]"
         "\nUsage: Gets info of a chat. Some info might be limited due to missing permissions."
