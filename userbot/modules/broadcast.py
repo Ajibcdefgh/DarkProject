@@ -54,8 +54,8 @@ async def gucast(event):
 
 CMD_HELP.update({
     "gcast": "\
-`.gcast query`\
+`.gcast [query]`\
 \nUsage: Globally Broadcast from all the Group .\
-\n\n`.gucast query`\
+\n\n`.gucast [query]`\
 \nUsage: Globally Broadcast from all the User in PM Chat"
 })
