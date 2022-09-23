@@ -13,12 +13,12 @@ import os
 import cv2
 from PIL import Image
 
-from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import bash, run_cmd
+from userbot.events import register
+from userbot.utils import bash
 
 
-@register(pattern="tiny(?: |$)(.*)")
+@register(outgoing=True, disable_errors=True, pattern=r"^\.tiny$")
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
@@ -26,7 +26,7 @@ async def ultiny(event):
         return
     xx = await event.edit("`Processing tiny...`")
     ik = await event.client.download_media(reply)
-    im1 = Image.open("userbot/resources/blank.png")
+    im1 = Image.open("userbot/resource/blank.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         await bash("lottie_convert.py ult.tgs json.json")
