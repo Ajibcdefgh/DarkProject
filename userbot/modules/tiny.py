@@ -6,7 +6,7 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 #
 # from ultroid plugins thanks
-# Port by: ᴊí @tracemoepy
+# Port by: @tracemoepy
 
 import os
 import io
@@ -92,7 +92,7 @@ async def _(event):
 
 @register(outgoing=True, pattern=r"^\.frog (.*)")
 async def honkasays(event):
-    await event.edit("`Sedang Memprosess!!!`")
+    await event.edit("`Membuat Kodok...`")
     text = event.pattern_match.group(1)
     if not text:
         return await event.edit("`Beri Aku Bebeberapa Teks, Contoh .frog test`")
