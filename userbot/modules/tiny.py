@@ -9,32 +9,32 @@
 # Port by: ᴊí @tracemoepy
 
 import os
+import io
 
-import cv2
 from PIL import Image
-
-from userbot import CMD_HELP
+from telethon import events
+from userbot import CMD_HELP , bot
 from userbot.events import register
-from userbot.utils import bash
 
 
-@register(outgoing=True, disable_errors=True, pattern=r"^\.tiny$")
-async def ultiny(event):
+@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
+async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Balas Ke Pesan Sticker !`")
+        await event.edit("`Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Processing tiny...`")
-    ik = await event.client.download_media(reply)
+    await event.edit("`Memproses...`")
+    ik = await bot.download_media(reply)
     im1 = Image.open("userbot/resource/blank.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
-        await bash("lottie_convert.py ult.tgs json.json")
-        with open("json.json") as json:
-            jsn = json.read()
+        os.system("lottie_convert.py ult.tgs json.json")
+        json = open("json.json", "r")
+        jsn = json.read()
+        json.close()
         jsn = jsn.replace("512", "2000")
         open("json.json", "w").write(jsn)
-        await bash("lottie_convert.py json.json ult.tgs")
+        os.system("lottie_convert.py json.json ult.tgs")
         file = "ult.tgs"
         os.remove("json.json")
     elif ik.endswith((".gif", ".mp4")):
@@ -85,9 +85,8 @@ async def ultiny(event):
         file = "o.webp"
         os.remove("k.png")
     await event.client.send_file(event.chat_id, file, reply_to=event.reply_to_msg_id)
-    await xx.delete()
+    await event.delete()
     os.remove(file)
     os.remove(ik)
-
 
 CMD_HELP.update({"tiny": ">`.tiny [Reply to media or sticker`\n" "Usage: reduce media or sticker size\n\n"})
