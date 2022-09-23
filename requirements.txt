@@ -36,7 +36,6 @@ lyricsgenius
 natsort
 newthon==1.27.5
 oauth2client
-opencv-python-headless
 pendulum
 Pillow
 psycopg2-binary
