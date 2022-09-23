@@ -107,7 +107,7 @@ async def repeat(rep):
 @register(outgoing=True, pattern=r"^\.repo$")
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
-    await wannasee.edit("Here is my [Repo](https://github.com/Ajibcdefgh/DarkProject)")
+    await wannasee.edit("Klik [Disini](https://github.com/Ajibcdefgh/DarkProject) Untuk Melihat Repo Saya")
 
 
 @register(outgoing=True, pattern=r"^\.raw$")
