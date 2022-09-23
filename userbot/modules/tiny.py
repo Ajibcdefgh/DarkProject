@@ -13,9 +13,10 @@ import io
 
 from PIL import Image
 from telethon import events
+from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
+
 from userbot import CMD_HELP , bot
 from userbot.events import register
-
 
 @register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
 async def _(event):
