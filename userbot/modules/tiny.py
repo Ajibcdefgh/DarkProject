@@ -92,7 +92,7 @@ async def _(event):
 
 @register(outgoing=True, pattern=r"^\.frog (.*)")
 async def honkasays(event):
-    await event.edit("`Membuat Kodok...`")
+    await event.edit("`Making a Frog for u...`")
     text = event.pattern_match.group(1)
     if not text:
         return await event.edit("`Give Me Some Text, Example .frog test`")
@@ -127,4 +127,4 @@ async def honkasays(event):
         await event.edit("Sorry I can't send stickers here !!")
 
 
-CMD_HELP.update({"tiny": ">`.tiny [Reply to media or sticker`\n" "Usage: reduce media or sticker size]\n\n"})
+CMD_HELP.update({"tiny": ">`.tiny [ Reply to media or sticker ]`\n" "Usage: reduce media or sticker size\n\n"})
