@@ -95,7 +95,7 @@ async def honkasays(event):
     await event.edit("`Membuat Kodok...`")
     text = event.pattern_match.group(1)
     if not text:
-        return await event.edit("`Beri Aku Bebeberapa Teks, Contoh .frog test`")
+        return await event.edit("`Give Me Some Text, Example .frog test`")
     try:
         if not text.endswith("."):
             text = text + "."
@@ -122,9 +122,9 @@ async def honkasays(event):
             )
         await event.delete()
     except ChatSendInlineForbiddenError:
-        await event.edit("`Maaf Saya tidak bisa menggunakan hal-hal sebaris di sini...`")
+        await event.edit("`Sorry I can't use inline stuff here...`")
     except ChatSendStickersForbiddenError:
-        await event.edit("Maaf saya tidak bisa mengirim stiker ke sini !!")
+        await event.edit("Sorry I can't send stickers here !!")
 
 
-CMD_HELP.update({"tiny": ">`.tiny [Reply to media or sticker`\n" "Usage: reduce media or sticker size\n\n"})
+CMD_HELP.update({"tiny": ">`.tiny [Reply to media or sticker`\n" "Usage: reduce media or sticker size]\n\n"})
