@@ -127,4 +127,4 @@ async def honkasays(event):
         await event.edit("Sorry I can't send stickers here !!")
 
 
-CMD_HELP.update({"tiny": ">`.tiny [ Reply to media or sticker ]`\n" "Usage: reduce media or sticker size\n\n"})
+CMD_HELP.update({"tiny": ">`.tiny (Reply to media/sticker)`\n" "Usage: reduce media or sticker size\n\n"})
