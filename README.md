@@ -124,7 +124,7 @@ based on [ProjectBish](https://github.com/adekmaulana/ProjectBish) and [WeebProj
 * [Alfianandaa](https://github.com/alfianandaa) - ProjectAlf
 * [GengKapak](https://github.com/GengKapak) - DCLXVI
 * [BianSepang](https://github.com/BianSepang) - WeebProject
-and [everyone](https://github.com/BianSepang/WeebProject/graphs/contributors) that makes this userbot awesome :D
+and [everyone](https://github.com/Ajibcdefgh/DarkProject/graphs/contributors) that makes this userbot awesome :D
 
 ## License
 Licensed under [Raphielscape Public License](https://github.com/BianSepang/WeebProject/blob/master/LICENSE) - Version 1.d, February 2020
