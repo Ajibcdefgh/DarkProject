@@ -456,8 +456,8 @@ CMD_HELP.update(
         "(Default: 🤔)"
         "\n\n>`.stkrinfo`"
         "\nUsage: Gets info about the sticker pack."
-        "\n\n>`.frog <kata - kata>`"
-        "\nUsage: Membuat animasi stiker."
+        "\n\n>`.frog <text>`"
+        "\nUsage: Create a frog animated stickers."
         "\n\n>`.stoi`"
         "\nUsage: Reply to a sticker to get 'PNG' file of sticker."
     }
